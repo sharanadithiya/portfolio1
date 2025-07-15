@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Sharan adithiya K | Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Scroll Progress Indicator -->
+    <div class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50" id="progress-bar"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 touch-pan-y">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center animate-scale-in">
+                    
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active hover:-translate-y-1 transition-transform duration-300">Home</a>
+                    <a href="#about" class="nav-link hover:-translate-y-1 transition-transform duration-300">About</a>
+                    <a href="#skills" class="nav-link hover:-translate-y-1 transition-transform duration-300">Skills</a>
+                    <a href="#projects" class="nav-link hover:-translate-y-1 transition-transform duration-300">Projects</a>
+                    <a href="#contact" class="nav-link hover:-translate-y-1 transition-transform duration-300">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md pb-4 px-4 shadow-lg w-full">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="nav-link py-2 active">Home</a>
+                <a href="#about" class="nav-link py-2">About</a>
+                <a href="#skills" class="nav-link py-2">Skills</a>
+                <a href="#projects" class="nav-link py-2">Projects</a>
+                <a href="#contact" class="nav-link py-2">Contact</a>
+                <button id="theme-toggle-mobile" class="text-left py-2 flex items-center">
+                    <i class="fas fa-moon dark:hidden mr-2"></i>
+                    <i class="fas fa-sun hidden dark:block mr-2"></i>
+                    Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Particles -->
+    <section id="home" class="min-h-screen flex items-center pt-16 relative overflow-hidden">
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        Hi, I'm <span class="gradient-text">Sharan adithiya K</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+                        Full Stack Developer & UI/UX Designer
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
+                        I build exceptional digital experiences that are fast, accessible, and visually appealing. Let's create something amazing together!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 animate-float relative overflow-hidden">
+                        <img src="" 
+                             alt="Profile" 
+                             class="w-full h-full object-cover mix-blend-multiply filter grayscale contrast-100">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl animate-slide-up" style="margin-top: 100px;">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-medal text-blue-500 dark:text-blue-300 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Fresher</p>
+                                <p class="text-sm text-gray-500">Eager to Learn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        I’m an enthusiastic Full Stack Developer eager to build modern web applications. As a fresher, I bring strong foundational knowledge in front-end and back-end technologies and a passion for creating seamless digital experiences.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        My approach blends technical learning with creative problem-solving. I believe great software should not only work efficiently but also provide an intuitive and engaging user experience. I’m excited to contribute to dynamic teams and grow as a developer in real-world projects.
+
+
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="D:\Portfolio\sharan resume.pdf" download class="flex items-center text-blue-500 dark:text-blue-400 hover:underline">
+                            <i class="fas fa-file-pdf mr-2"></i> Download CV
+                        </a>
+                        <a href="#contact" class="flex items-center text-purple-500 dark:text-purple-400 hover:underline">
+                            <i class="fas fa-envelope mr-2"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 animate-slide-up">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-code text-blue-500 dark:text-blue-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">Web Development</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm text-center">
+                            Building responsive, performant web applications with modern technologies.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-paint-brush text-purple-500 dark:text-purple-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">UI/UX Design</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm text-center">
+                            Creating intuitive interfaces with a focus on user experience.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-mobile-alt text-green-500 dark:text-green-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">Mobile Apps</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm text-center">
+                            Developing cross-platform mobile applications with React Native.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-server text-yellow-500 dark:text-yellow-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-center mb-2">Backend Services</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm text-center">
+                            Designing scalable APIs and database architectures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with 3D Visualization -->
+    <section id="skills" class="py-20 relative">
+        <div id="skills-3d-container" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12 text-center">
+                <div class="inline-flex rounded-full overflow-hidden shadow-md">
+                    <button class="skill-filter px-6 py-2 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="all">All</button>
+                    <button class="skill-filter px-6 py-2 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="frontend">Frontend</button>
+                    <button class="skill-filter px-6 py-2 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="backend">Backend</button>
+                    <button class="skill-filter px-6 py-2 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="design">Design</button>
+                    <button class="skill-filter px-6 py-2 bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="tools">Tools</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
+                <!-- Fundamental Skills -->
+                <div class="skill-pill frontend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:scale-105">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-html5 text-blue-500 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">HTML/CSS</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill frontend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-js text-yellow-500 dark:text-yellow-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">JavaScript</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill frontend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-css3-alt text-blue-500 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">CSS/Tailwind</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="skill-pill backend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-node-js text-green-500 dark:text-green-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Node.js</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill backend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-database text-blue-500 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">MongoDB</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill backend bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-database text-teal-500 dark:text-teal-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">MySQL</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-teal-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <!-- Design Skills -->
+                <div class="skill-pill design bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-figma text-pink-500 dark:text-pink-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Figma</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-pink-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill design bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-adobe text-orange-500 dark:text-orange-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Adobe XD</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="skill-pill tools bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mb-3">
+                        <i class="fab fa-git-alt text-gray-500 dark:text-gray-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Git</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-gray-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill tools bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-paint-brush text-indigo-500 dark:text-indigo-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Canva</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-indigo-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-pill tools bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-3">
+                        <i class="fas fa-code text-blue-500 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <span class="font-medium">Visual Studio</span>
+                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Carousel -->
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800 relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 dark:opacity-10">
+            <div class="grid grid-cols-12 grid-rows-6 h-full">
+                <div class="border-r border-b border-gray-300 dark:border-gray-600" v-for="n in 72" :key="n"></div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12 text-center">
+                <div class="inline-flex flex-wrap justify-center gap-2">
+                    <button class="project-filter px-4 py-2 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="all">All</button>
+                    <button class="project-filter px-4 py-2 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="web">Web Apps</button>
+                    <button class="project-filter px-4 py-2 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="mobile">Mobile Apps</button>
+                    <button class="project-filter px-4 py-2 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all" data-filter="design">UI/UX Design</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                <!-- Project 1 -->
+                <div class="project-card web bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 1" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Personal Portfolio</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">HTML</span>
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-500 text-xs rounded-full">CSS</span>
+                                    <span class="px-2 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            My first portfolio website built with pure HTML, CSS and JavaScript to showcase my projects and skills.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card mobile bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Fitness Tracker App</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">React Native</span>
+                                    <span class="px-2 py-1 bg-purple-500/20 text-purple-500 text-xs rounded-full">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A mobile application for tracking workouts, nutrition, and progress with personalized recommendations.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> App Store
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card design bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Banking App UI</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-pink-500/20 text-pink-500 text-xs rounded-full">Figma</span>
+                                    <span class="px-2 py-1 bg-orange-500/20 text-orange-500 text-xs rounded-full">Adobe XD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Modern banking interface design with intuitive navigation and seamless user experience.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Prototype
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card web bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 4" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Project Management Tool</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">Vue.js</span>
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-500 text-xs rounded-full">Express</span>
+                                    <span class="px-2 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A collaborative project management solution with task tracking, team communication, and analytics.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card mobile bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 5" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Recipe Finder App</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">Flutter</span>
+                                    <span class="px-2 py-1 bg-red-500/20 text-red-500 text-xs rounded-full">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Discover and save recipes based on ingredients you have, with step-by-step cooking instructions.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Play Store
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card design bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Project 6" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Travel Booking UI</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-pink-500/20 text-pink-500 text-xs rounded-full">Figma</span>
+                                    <span class="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">Illustrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Complete redesign of a travel booking platform with focus on usability and visual appeal.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Prototype
+                            </a>
+                            <a href="#" class="text-purple-500 dark:text-purple-400 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Animated Form -->
+    <section id="contact" class="py-20 relative">
+        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob"></div>
+        <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-20 left-1/4 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-6">Let's Talk About Your Project</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        I'm currently available for freelance work and full-time positions. If you have a project that you want to get started, think you need my help with something, or just fancy saying hello, then get in touch.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope text-blue-500 dark:text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email Me</h4>
+                                <a href="mailto:ksharanadithiya@gmail.com" class="text-gray-600 dark:text-gray-300 hover:underline">ksharanadithiya@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-purple-500 dark:text-purple-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Call Me</h4>
+                                <a href="tel:+91 9025174052" class="text-gray-600 dark:text-gray-300 hover:underline">+91 9025174052</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-green-500 dark:text-green-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Coimbatore, Tamil Nadu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <a href="https://www.linkedin.com/in/sharan-adithiya-k-586b56303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all hover:scale-110">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/Sha1085K17?t=EMwGiCwI03N3UXOjAR7kZg&s=09" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 hover:text-white transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/SharanAdithiyak" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up">
+                    <form class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 sm:py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 text-base sm:text-sm">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-95">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600 dark:text-gray-300">&copy; 2023 Sharan adithiya K. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Terms of Service</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html> 
